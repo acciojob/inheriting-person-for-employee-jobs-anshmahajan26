@@ -5,13 +5,13 @@ class Person {
   }
 
   greet() {
-    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
   }
 }
 
 class Employee extends Person {
   constructor(name, age, jobTitle) {
-    super(name, age);        // call Person constructor
+    super(name, age);
     this.jobTitle = jobTitle;
   }
 
@@ -21,13 +21,6 @@ class Employee extends Person {
     );
   }
 }
-
-// Example usage (required by test)
-const person = new Person("Alice", 25);
-person.greet();
-
-const employee = new Employee("Bob", 30, "Manager");
-employee.jobGreet();
 
 // Do not change code below this line
 window.Person = Person;
